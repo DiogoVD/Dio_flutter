@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -104,11 +106,14 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: .center,
           children: [
-            const Text('You have pushed the button this many times:'),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
+            Text('Você pressionou o botão $_counter vezes.',
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(color: Colors.black)
+              ),
+              
+            // Text(
+            //  '$_counter',
+            //  style: Theme.of(context).textTheme.headlineLarge,
+            //),
           ],
         ),
       ),
